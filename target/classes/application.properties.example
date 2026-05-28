@@ -1,0 +1,29 @@
+# Server port
+server.port=
+
+# Database config
+spring.datasource.url=
+spring.datasource.driverClassName=
+spring.datasource.username=
+spring.datasource.password=
+spring.jpa.database-platform=
+
+# setup local h2 database console
+spring.h2.console.enabled
+spring.h2.console.path=
+spring.h2.console.settings.web-allow-others=
+
+# local h2 tables setup on startup; use the value "none" in production!
+spring.jpa.hibernate.ddl-auto=
+
+# Enable lazy loading
+spring.jpa.properties.hibernate.enable_lazy_load_no_trans=
+
+# Thyemeleaf settings
+thymeleaf.version=
+thymeleaf-layout-dialect.version=
+
+
+spring.mvc.static-path-pattern=/resources/static/**
+
+
