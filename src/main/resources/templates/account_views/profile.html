@@ -16,7 +16,14 @@
 			<div class="container">
 				<div class="heading_container">
 					<h4>Profile</h4>
-          <img th:src="@{${photo}}" class="rounded-circle" style="width: 150px; float: left; padding: 10px 10px 10px 10px;" alt="Avatar"/>
+          <img th:src="${photo + '?t=' + timestamp}" class="rounded-circle" style="width: 150px; float: left; padding: 10px 10px 10px 10px;" alt="Avatar"/>
+					<p th:text="${error}" th:if="${error ne null}" class="alert alert-danger"></p>
+					<form method="post" th:action="@{/update_photo}" enctype="multipart/form-data">
+						<div class="form-group">
+							<input type="file" name="file" class="form-control-file"/>
+						</div>
+						<button type="submit" class="btn btn-primary">Update photo</button>
+					</form>
 				</div>
 				<div class="row">
 					<div class="col-md-6">
